@@ -1,7 +1,13 @@
+import Hero from "@/components/Home/Hero";
+
 import React from "react";
 
-const Hmoe = () => {
-  return <div></div>;
+const Home: React.FC = () => {
+  return (
+    <div className="container">
+      <Hero />
+    </div>
+  );
 };
 
-export default Hmoe;
+export default Home;

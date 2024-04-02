@@ -1,4 +1,5 @@
 import Border from "@/UI/Border";
+import BottomNav from "@/components/Header/BottomNav";
 import MiddleNav from "@/components/Header/MiddleNav";
 import TopNav from "@/components/Header/TopNav";
 
@@ -8,6 +9,9 @@ const Header = () => {
       <TopNav />
       <Border />
       <MiddleNav />
+      <Border />
+      <BottomNav />
+      <Border />
     </header>
   );
 };

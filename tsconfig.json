@@ -21,6 +21,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/UI/ButtonPrimary.jsx",
+    "src/components/Footer/Head.jsx",
+    "src/containers/Footer.jsx"
+  ],
   "exclude": ["node_modules"]
 }

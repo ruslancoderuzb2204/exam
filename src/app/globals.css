@@ -6,10 +6,16 @@
 
 body {
   font-family: "Manrope", sans-serif;
+  background: #f8f7f3;
 }
 
 .container {
   max-width: 1960px;
   margin: 0 auto;
   padding: 0 65px;
+}
+.hero {
+  background-image: url("../constants/Vector.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
 }
