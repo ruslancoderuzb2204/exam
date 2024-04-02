@@ -53,7 +53,7 @@ const Famous = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-2 gap-4">
           {[Famous4, Famous5, Famous6, Famous7].map((image, index) => (
             <div

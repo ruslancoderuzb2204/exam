@@ -18,8 +18,14 @@ import Choose from "./symbol1.png";
 import Choose1 from "./symbol2.png";
 import Choose2 from "./symbol3.png";
 import Choose3 from "./symbol4.png";
+import Brand from "./zam.png";
+import Brand1 from "./zam1.png";
+import Brand2 from "./zam2.png";
 
 export {
+  Brand,
+  Brand1,
+  Brand2,
   Famous4,
   Choose,
   Choose1,
