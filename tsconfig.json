@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "src/UI/ButtonPrimary.jsx",
     "src/components/Footer/Head.jsx",
-    "src/containers/Footer.jsx"
+    "src/containers/Footer.jsx",
+    "src/components/Home/Products.jsx"
   ],
   "exclude": ["node_modules"]
 }
