@@ -19,14 +19,16 @@ const Home: React.FC = () => {
       <WhyChoose />
       <Products />
       <Brands />
-      <div className="grid grid-cols-2 text-white items-start py-8 bg-[#088269] ">
+      <div className="grid grid-cols-2 mb-20 text-white items-start py-8 bg-[#088269] ">
         <h2 className="ml-10 text-2xl">Информация о компании</h2>
         <div>
           <AboutCompAccordion title={"Next Js"} />
           <AboutCompAccordion title={"React Js"} />
           <AboutCompAccordion title={"Javascript"} />
+          <AboutCompAccordion title={"Typescript"} />
         </div>
       </div>
+      <Brands />
     </div>
   );
 };
