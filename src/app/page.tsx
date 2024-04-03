@@ -1,5 +1,4 @@
 "use client";
-import Hero from "@/components/Home/Hero";
 import Famous from "@/components/Home/Famous";
 import Block from "@/components/Home/Block";
 import WhyChoose from "@/components/Home/WhyChoose";
@@ -9,6 +8,7 @@ import Brands from "@/components/Home/Brands";
 import { AboutCompAccordion } from "@/components/Home/AboutCompAccordion";
 
 import React from "react";
+import Hero from "@/components/Home/Hero";
 
 const Home: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <Block />
       <WhyChoose />
       <Products />
-      <Brands/>
+      <Brands />
       <div className="grid grid-cols-2 text-white items-start py-8 bg-[#088269] ">
         <h2 className="ml-10 text-2xl">Информация о компании</h2>
         <div>

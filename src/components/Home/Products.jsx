@@ -71,7 +71,7 @@ const Products = () => {
         elements={["Хиты продаж", "Новинки", "Акции"]}
         title="Каталог товаров"
       />
-      <div className="mb-20 overflow-x-auto rounded-lg">
+      <div id="scrollbar1" className="mb-20 overflow-x-auto rounded-lg">
         <div className="flex flex-shrink-1 gap-4">
           {productsData.map((product, index) => (
             <div
