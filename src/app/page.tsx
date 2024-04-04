@@ -4,6 +4,7 @@ import Block from "@/components/Home/Block";
 import WhyChoose from "@/components/Home/WhyChoose";
 import Products from "@/components/Home/Products";
 import Brands from "@/components/Home/Brands";
+import News from "@/components/Home/News";
 
 import { AboutCompAccordion } from "@/components/Home/AboutCompAccordion";
 
@@ -28,7 +29,7 @@ const Home: React.FC = () => {
           <AboutCompAccordion title={"Typescript"} />
         </div>
       </div>
-      <Brands />
+      <News />
     </div>
   );
 };

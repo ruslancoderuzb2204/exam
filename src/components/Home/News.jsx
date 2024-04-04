@@ -1,33 +1,33 @@
 import Image from "next/image";
 import LeftSide from "../Home/LeftSide";
-import { Brand, Brand1, Brand2 } from "@/constants";
+import { Rectangle, Rectangle1, Rectangle2, Rectangle3 } from "@/constants";
 import Slider from "react-slick";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 import { useRef } from "react";
 import ButtonPrimary from "@/UI/ButtonPrimary";
 
-const Brands = () => {
+const News = () => {
   const settings = {
     dots: true,
-    infinite: true, // Enable infinite loop
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
   };
 
-  const sliderRef = useRef(null); // Use useRef
+  const sliderRef = useRef(null);
 
   const next = () => {
-    sliderRef.current.slickNext(); // Access current property
+    sliderRef.current.slickNext();
   };
 
   const previous = () => {
-    sliderRef.current.slickPrev(); // Access current property
+    sliderRef.current.slickPrev();
   };
 
   return (
     <div className="flex gap-40 relative mb-20">
-      <LeftSide title="Бренды" elements={["Эксклюзивные", "Поставщики"]} />
+      <LeftSide title="Новости компании" elements={[]} />
       <div className="overflow-hidden">
         <Slider
           arrows={false}
@@ -35,23 +35,35 @@ const Brands = () => {
           {...settings}
           className="overflow-visible"
         >
-          {[Brand, Brand1, Brand2, Brand, Brand1, Brand2].map(
+          {[Rectangle, Rectangle1, Rectangle2, Rectangle3].map(
             (brand, index) => (
               <div key={index} className="">
                 <div className="rounded-lg border m-2 border-[#E5E2EE] ">
-                  <div className="mb-4 bg-white w-full h-56 flex justify-center items-center">
-                    <Image alt="img" src={brand} width={200} height={200} />
+                  <div className="mb-4 bg-white  w-full">
+                    <Image
+                      alt="img"
+                      src={brand}
+                      className="w-full"
+                      width={200}
+                      height={200}
+                    />
                   </div>
-                  <p className="text-xl py-3 pl-6 bg-[#f8f7f3] mb-2">
-                    НМИЦ онкологии им. Н.Н. Блохина
-                  </p>
+                  <div className="py-3 pl-6">
+                    <span className="text-xs text-[#7A7687]">07.11.2022</span>
+                    <h3 className="text-base font-semibold">
+                      Название новости{" "}
+                    </h3>
+                    <p className="text-lg font-medium  text-[#7A7687] mb-2">
+                      Допускает внедрение поэтапного и развития общества.
+                    </p>
+                  </div>
                 </div>
               </div>
             )
           )}
         </Slider>
         <div className="flex justify-end mt-8">
-          <ButtonPrimary>Сертификаты</ButtonPrimary>
+          <ButtonPrimary>Все новости</ButtonPrimary>
         </div>
         <div className="text-3xl flex gap-4 absolute left-15 bottom-1 ">
           <button
@@ -69,4 +81,4 @@ const Brands = () => {
   );
 };
 
-export default Brands;
+export default News;

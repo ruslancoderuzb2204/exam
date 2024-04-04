@@ -21,8 +21,16 @@ import Choose3 from "./symbol4.png";
 import Brand from "./zam.png";
 import Brand1 from "./zam1.png";
 import Brand2 from "./zam2.png";
+import Rectangle from "./Rectangle (2).png";
+import Rectangle1 from "./Rectangle (3).png";
+import Rectangle2 from "./Rectangle (4).png";
+import Rectangle3 from "./Rectangle (5).png";
 
 export {
+  Rectangle,
+  Rectangle1,
+  Rectangle2,
+  Rectangle3,
   Brand,
   Brand1,
   Brand2,
