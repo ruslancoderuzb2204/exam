@@ -6,6 +6,8 @@ import Products from "@/components/Home/Products";
 import Brands from "@/components/Home/Brands";
 import News from "@/components/Home/News";
 import Questions from "@/components/Home/Questions";
+import Subscribe from "@/components/Home/Subscribe";
+
 
 
 import { AboutCompAccordion } from "@/components/Home/AboutCompAccordion";
@@ -35,6 +37,7 @@ const Home: React.FC = () => {
       </div>
       <News />
       <Questions/>
+      <Subscribe/>
     </div>
   );
 };

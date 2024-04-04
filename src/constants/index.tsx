@@ -25,8 +25,10 @@ import Rectangle from "./Rectangle (2).png";
 import Rectangle1 from "./Rectangle (3).png";
 import Rectangle2 from "./Rectangle (4).png";
 import Rectangle3 from "./Rectangle (5).png";
+import EmailIcon from "./Vector (7).png"
 
 export {
+  EmailIcon,
   Rectangle,
   Rectangle1,
   Rectangle2,
