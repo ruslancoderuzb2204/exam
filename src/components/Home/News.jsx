@@ -26,55 +26,57 @@ const News = () => {
   };
 
   return (
-    <div className="flex gap-40 relative mb-20">
-      <LeftSide title="Новости компании" elements={[]} />
-      <div className="overflow-hidden">
-        <Slider
-          arrows={false}
-          ref={sliderRef}
-          {...settings}
-          className="overflow-visible"
-        >
-          {[Rectangle, Rectangle1, Rectangle2, Rectangle3].map(
-            (brand, index) => (
-              <div key={index} className="">
-                <div className="rounded-lg border m-2 border-[#E5E2EE] ">
-                  <div className="mb-4 bg-white  w-full">
-                    <Image
-                      alt="img"
-                      src={brand}
-                      className="w-full"
-                      width={200}
-                      height={200}
-                    />
-                  </div>
-                  <div className="py-3 pl-6">
-                    <span className="text-xs text-[#7A7687]">07.11.2022</span>
-                    <h3 className="text-base font-semibold">
-                      Название новости{" "}
-                    </h3>
-                    <p className="text-lg font-medium  text-[#7A7687] mb-2">
-                      Допускает внедрение поэтапного и развития общества.
-                    </p>
+    <div className="container">
+      <div className="flex gap-40 relative my-20">
+        <LeftSide title="Новости компании" elements={[]} />
+        <div className="overflow-hidden">
+          <Slider
+            arrows={false}
+            ref={sliderRef}
+            {...settings}
+            className="overflow-visible"
+          >
+            {[Rectangle, Rectangle1, Rectangle2, Rectangle3].map(
+              (brand, index) => (
+                <div key={index} className="">
+                  <div className="rounded-lg border m-2 border-[#E5E2EE] ">
+                    <div className="mb-4 bg-white  w-full">
+                      <Image
+                        alt="img"
+                        src={brand}
+                        className="w-full"
+                        width={200}
+                        height={200}
+                      />
+                    </div>
+                    <div className="py-3 pl-6">
+                      <span className="text-xs text-[#7A7687]">07.11.2022</span>
+                      <h3 className="text-base font-semibold">
+                        Название новости{" "}
+                      </h3>
+                      <p className="text-lg font-medium  text-[#7A7687] mb-2">
+                        Допускает внедрение поэтапного и развития общества.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          )}
-        </Slider>
-        <div className="flex justify-end mt-8">
-          <ButtonPrimary>Все новости</ButtonPrimary>
-        </div>
-        <div className="text-3xl flex gap-4 absolute left-15 bottom-1 ">
-          <button
-            className="button p-2 rounded-full border-2  "
-            onClick={previous}
-          >
-            <GrFormPreviousLink />
-          </button>
-          <button className="button p-2 rounded-full border-2" onClick={next}>
-            <GrFormNextLink />
-          </button>
+              )
+            )}
+          </Slider>
+          <div className="flex justify-end mt-8">
+            <ButtonPrimary>Все новости</ButtonPrimary>
+          </div>
+          <div className="text-3xl flex gap-4 absolute left-15 bottom-1 ">
+            <button
+              className="button p-2 rounded-full border-2  "
+              onClick={previous}
+            >
+              <GrFormPreviousLink />
+            </button>
+            <button className="button p-2 rounded-full border-2" onClick={next}>
+              <GrFormNextLink />
+            </button>
+          </div>
         </div>
       </div>
     </div>

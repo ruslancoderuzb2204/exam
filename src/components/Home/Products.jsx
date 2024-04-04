@@ -66,7 +66,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="flex gap-12">
+    <div className="flex container gap-12">
       <LeftSide
         elements={["Хиты продаж", "Новинки", "Акции"]}
         title="Каталог товаров"

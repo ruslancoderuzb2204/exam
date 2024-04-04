@@ -25,7 +25,7 @@ function Hero() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative container">
       <Slider
         arrows={false}
         ref={(slider) => {

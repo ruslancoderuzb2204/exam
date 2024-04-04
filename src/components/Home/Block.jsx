@@ -36,7 +36,7 @@ function EquipmentBlock() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative container">
       <Slider
         style={{ display: "flex", gap: "20px" }}
         arrows={false}
