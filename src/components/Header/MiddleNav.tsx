@@ -5,12 +5,15 @@ import { GoPerson } from "react-icons/go";
 import { CiHeart } from "react-icons/ci";
 import { SlBasket } from "react-icons/sl";
 import { BarChart } from "lucide-react";
+import Link from "next/link";
 const MiddleNav = () => {
   return (
     <div className="container flex justify-between items-center ">
       <div className="text-[#7A7687] flex text-sm py-4 items-center gap-10 lg:gap-8 md:gap-4 sm:gap-2">
         <div>
-          <Image src={Logo} alt="Logo" width={50} height={20} />
+          <Link href="/">
+            <Image src={Logo} alt="Logo" width={50} height={20} />
+          </Link>
         </div>
         <div className="flex items-center  border-[#D5D1E1] border  rounded-full">
           <p className="px-4 py-2.5   rounded-full bg-[#EFEFEF]">
