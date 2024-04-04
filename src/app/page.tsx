@@ -8,12 +8,11 @@ import News from "@/components/Home/News";
 import Questions from "@/components/Home/Questions";
 import Subscribe from "@/components/Home/Subscribe";
 
-
-
 import { AboutCompAccordion } from "@/components/Home/AboutCompAccordion";
 
 import React from "react";
 import Hero from "@/components/Home/Hero";
+import MarqueePg from "@/components/Home/Marquee";
 
 const Home: React.FC = () => {
   return (
@@ -23,6 +22,7 @@ const Home: React.FC = () => {
       <Block />
       <WhyChoose />
       <Products />
+      <MarqueePg />
       <Brands />
       <div className=" bg-[#088269] py-8">
         <div className="grid grid-cols-2 mb-20 text-white items-start container">
@@ -36,8 +36,8 @@ const Home: React.FC = () => {
         </div>
       </div>
       <News />
-      <Questions/>
-      <Subscribe/>
+      <Questions />
+      <Subscribe />
     </div>
   );
 };

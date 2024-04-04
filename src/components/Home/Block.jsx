@@ -37,8 +37,10 @@ function EquipmentBlock() {
 
   return (
     <div className="relative container">
+      <h2 className="text-3xl ml-4 font-semibold">
+        Комплексное оснащение кабинетов
+      </h2>
       <Slider
-        style={{ display: "flex", gap: "20px" }}
         arrows={false}
         ref={(slider) => {
           sliderRef = slider;
@@ -54,7 +56,7 @@ function EquipmentBlock() {
           </div>
         ))}
       </Slider>
-      <div className="text-3xl flex gap-4 absolute left-5 ">
+      <div className="text-3xl flex gap-4 absolute left-20 ">
         <button className="button p-2 rounded-full bg-white" onClick={previous}>
           <GrFormPreviousLink />
         </button>

@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { CompareIcon, Logo } from "@/constants";
+import { Logo } from "@/constants";
 import { BiSearch } from "react-icons/bi";
 import { GoPerson } from "react-icons/go";
 import { CiHeart } from "react-icons/ci";
 import { SlBasket } from "react-icons/sl";
+import { BarChart } from "lucide-react";
 const MiddleNav = () => {
   return (
     <div className="container flex justify-between items-center ">
@@ -42,7 +43,8 @@ const MiddleNav = () => {
           </li>
           <li className="flex flex-col items-center gap-1 text-[#7A7687]">
             <div>
-              <Image width={17} src={CompareIcon} alt="compare icon" />
+              <BarChart />
+              {/* <Image width={17} src={CompareIcon} alt="compare icon" /> */}
             </div>
             <p>Сравнить</p>
           </li>

@@ -52,7 +52,7 @@ function Hero() {
           </div>
         ))}
       </Slider>
-      <div className="text-3xl flex gap-4 absolute right-5 bottom-5">
+      <div className="text-3xl flex gap-4 absolute right-20 bottom-5">
         <button className="button p-2 rounded-full bg-white" onClick={previous}>
           <GrFormPreviousLink />
         </button>

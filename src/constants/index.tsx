@@ -25,9 +25,15 @@ import Rectangle from "./Rectangle (2).png";
 import Rectangle1 from "./Rectangle (3).png";
 import Rectangle2 from "./Rectangle (4).png";
 import Rectangle3 from "./Rectangle (5).png";
-import EmailIcon from "./Vector (7).png"
+import EmailIcon from "./Vector (7).png";
+import MarqueeImg from "./image.png";
+import MarqueeImg1 from "./image2.png";
+import MarqueeImg2 from "./image3.png";
 
 export {
+  MarqueeImg,
+  MarqueeImg1,
+  MarqueeImg2,
   EmailIcon,
   Rectangle,
   Rectangle1,

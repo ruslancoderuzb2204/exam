@@ -30,6 +30,6 @@
     "src/components/Footer/Head.jsx",
     "src/containers/Footer.jsx",
     "src/components/Home/Products.jsx"
-, "src/components/Home/Hero.jsx"  ],
+, "src/components/Home/Hero.jsx", "src/components/Home/Marquee.tsx"  ],
   "exclude": ["node_modules"]
 }
