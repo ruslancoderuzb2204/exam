@@ -12,7 +12,7 @@ const WhyChoose = () => {
   return (
     <div className="container">
       <div className="my-20">
-        <h2 className="font-medium mb-4 text-3xl">Почему выбирают нас?</h2>
+        <h2 className="font-medium mb-4 text-3xl ">Почему выбирают нас?</h2>
         <div className="grid grid-cols-4 gap-4">
           {chooseItems.map((item, index) => (
             <div
