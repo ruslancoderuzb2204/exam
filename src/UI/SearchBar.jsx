@@ -12,7 +12,7 @@ const SearchBar = () => {
           placeholder="Поиск"
           className="border-none rounded-full h-10 bg-[#f8f7f3] pl-2 outline-none"
         />
-        <BiSearch className="w-10 rounded-full" />
+        <BiSearch className="w-10  rounded-full" />
       </label>
     </div>
   );
