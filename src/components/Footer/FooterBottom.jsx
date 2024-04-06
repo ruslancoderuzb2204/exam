@@ -15,9 +15,11 @@ const PaymentMethod = ({ src }) => (
 
 const FooterBottom = () => (
   <div>
-    <div className="mt-4 flex justify-between">
+    <div className="mt-4 flex md:grid-cols-1 xl:grid xl:grid-cols-2 justify-between">
       <div>
-        <div><Image src={Logo1} alt="Logo" width={100} height={40} /></div>
+        <div>
+          <Image src={Logo1} alt="Logo" width={100} height={40} />
+        </div>
         <p className="text-sm mt-2">ООО «ГЛОБАЛ МЕДИКАЛ ТРЕЙД»</p>
       </div>
       <div>
@@ -30,14 +32,20 @@ const FooterBottom = () => (
       </div>
       <div>
         <ul>
-          {["Партнерская программа", "Оптовые продажи", "Реквизиты"].map((item, index) => (
-            <MenuItem key={index} text={item} />
-          ))}
+          {["Партнерская программа", "Оптовые продажи", "Реквизиты"].map(
+            (item, index) => (
+              <MenuItem key={index} text={item} />
+            )
+          )}
         </ul>
       </div>
       <div className="flex gap-6">
         <ul>
-          {["Политика конфиденциальности", "Условия соглашения", "Карта сайта"].map((item, index) => (
+          {[
+            "Политика конфиденциальности",
+            "Условия соглашения",
+            "Карта сайта",
+          ].map((item, index) => (
             <MenuItem key={index} text={item} />
           ))}
         </ul>
@@ -52,8 +60,12 @@ const FooterBottom = () => (
       </div>
     </div>
     <div className="flex gap-20 justify-between mt-10 text-sm items-center">
-      <p className="w-40">© 2022 Медоборудование Все  права защищены</p>
-      <p className="opacity-75">Информация на данном сайте носит справочный характер и не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации</p>
+      <p className="w-40">© 2022 Медоборудование Все права защищены</p>
+      <p className="opacity-75">
+        Информация на данном сайте носит справочный характер и не является
+        публичной офертой, определяемой положениями Статьи 437 Гражданского
+        кодекса Российской Федерации
+      </p>
     </div>
   </div>
 );

@@ -6,14 +6,14 @@ const MenuItem = ({ text }) => (
 
 const FirstList = () => (
   <div className="flex justify-between mt-4">
-    <ul>
+    <ul className="mr-2">
       {["О компании", "Сертификаты", "Вакансии", "Гарантии", "Услуги", "Акции", "Акции"].map((item, index) => (
         <MenuItem key={index} text={item} />
       ))}
     </ul>
     <ul>
       {["Оплата", "Возврат", "FAQ", "Лизинг", "Отзывы", "Блог"].map((item, index) => (
-        <MenuItem key={index} text={item} />
+        <MenuItem  key={index} text={item} />
       ))}
     </ul>
   </div>

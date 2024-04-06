@@ -1,0 +1,68 @@
+import {
+  Famous1,
+  Famous2,
+  Famous3,
+  Famous4,
+  Famous5,
+  Famous6,
+  Famous7,
+} from "@/constants";
+
+export const productsData = [
+  {
+    id: 1,
+    image: Famous1,
+    title: "Анализатор мочи MIND UA-66",
+    article: "213134",
+    availability: "B наличии",
+    price: 300000,
+  },
+  {
+    id: 2,
+    image: Famous2,
+    title: "УЗИ аппарат Philips Affiniti 70",
+    article: "123456",
+    availability: "Есть в наличии",
+    price: 500000,
+  },
+  {
+    id: 3,
+    image: Famous3,
+    title: "Трахеотомия - муляж",
+    article: "789012",
+    availability: "B наличии",
+    price: 700000,
+  },
+  {
+    id: 4,
+    image: Famous4,
+    title: "Маммограф Planmed",
+    article: "345678",
+    availability: "B наличии",
+    price: 900000,
+  },
+  {
+    id: 5,
+    image: Famous5,
+    title: "С-дуга Philips Veradius",
+    article: "901234",
+    availability: "B наличии",
+    price: 1200000,
+  },
+  {
+    id: 6,
+    image: Famous6,
+    title: "Анализатор мочи",
+    article: "567890",
+    availability: "B наличии",
+    price: 1500000,
+  },
+  {
+    id: 7,
+    image: Famous7,
+    title: "Весь товар сертифицирован",
+    article: "234567",
+    availability: "B наличии",
+    price: 1800000,
+  },
+];

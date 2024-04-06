@@ -8,6 +8,7 @@ body {
   font-family: "Manrope", sans-serif;
   background: #f8f7f3;
 }
+
 #scrollbar1::-webkit-scrollbar {
   height: 12px;
   cursor: pointer;
@@ -16,7 +17,6 @@ body {
 #scrollbar1::-webkit-scrollbar-track {
   border-radius: 8px;
   cursor: pointer;
-
   background-color: #e7e7e7;
   border: 1px solid #cacaca;
 }
@@ -24,18 +24,30 @@ body {
 #scrollbar1::-webkit-scrollbar-thumb {
   border-radius: 8px;
   cursor: pointer;
-
   border: 3px solid transparent;
   background-clip: content-box;
   background-color: #088269;
 }
+
 .container {
   max-width: 1960px;
   margin: 0 auto;
   padding: 0 65px;
 }
+
 .hero {
   background-image: url("../constants/Vector.png");
   background-repeat: no-repeat;
   background-position-x: right;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 15px;
+  }
 }

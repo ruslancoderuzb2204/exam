@@ -1,8 +1,7 @@
 const ThirdList = () => {
   return (
-    <div>
+    <div className="md:flex md:justify-between md:items-center md:w-full">
       <h2 className="font-semibold my-6">Карта проезда</h2>
-
       <ul>
         <li>
           <p>График работы:</p>

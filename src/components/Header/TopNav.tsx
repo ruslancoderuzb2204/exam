@@ -1,6 +1,6 @@
 const TopNav = () => {
   return (
-    <div className="text-[#7A7687] flex justify-between items-center container text-xs  ">
+    <div className="text-[#7A7687] base:hidden flex justify-between items-center container text-xs  ">
       <ul className="flex gap-6 md:gap-4 sm:gap-2 py-4  ">
         <li>
           <p>О компании</p>
@@ -15,7 +15,7 @@ const TopNav = () => {
           <p>Гарантии</p>
         </li>
         <li>
-          <p>Блог</p>
+          <p className="md:hidden">Блог</p>
         </li>
       </ul>
       <ul className="flex gap-12 md:gap-8 sm:gap-4">

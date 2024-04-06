@@ -7,7 +7,7 @@ const SecondList = () => {
     "Акушерство и Гинекология",
     "Гистология",
     "Косметология",
-    "Орториноларингология",
+    "Орториноларинг",
     "Рентгенология и томография",
     "Стрерилизация",
     "Физиотерапия и реабилитация",
@@ -20,7 +20,7 @@ const SecondList = () => {
   ];
   return (
     <div className="flex justify-between mt-4">
-      <ul>
+      <ul className="mr-2 md:mr-1">
         {arr.slice(0, 6).map((item) => (
           <li key={item}>
             <p className="my-2">{item}</p>
@@ -34,7 +34,7 @@ const SecondList = () => {
           </li>
         ))}
       </ul>
-      <ul>
+      <ul className="ml-2">
         {arr.slice(13, 17).map((item) => (
           <li key={item}>
             <p className="my-2">{item}</p>

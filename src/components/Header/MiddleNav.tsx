@@ -1,62 +1,109 @@
+"use client";
 import Image from "next/image";
 import { Logo } from "@/constants";
-import { BiSearch } from "react-icons/bi";
 import { GoPerson } from "react-icons/go";
 import { CiHeart } from "react-icons/ci";
 import { SlBasket } from "react-icons/sl";
-import { BarChart } from "lucide-react";
+import { BarChart2, LogOut } from "lucide-react";
 import Link from "next/link";
+import SearchBar from "@/UI/SearchBar";
+import AuthenticationModal from "@/containers/LoginModal";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 const MiddleNav = () => {
+  const [token, setToken] = useState<object | boolean>(false);
+  const [token1, setToken1] = useState<object | boolean>(false);
+
+  useEffect(() => {
+    const tokenString = localStorage.getItem("token");
+    if (tokenString) {
+      const parsedToken = JSON.parse(tokenString);
+      setToken(parsedToken);
+    }
+  }, []);
+  useEffect(() => {
+    if (token) {
+      setToken1(!token1);
+    }
+  }, [token]);
+  const [showModal, setShowModal] = useState(false);
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+  const notify = () =>
+    toast.success("Bxoд успешна!", {
+      duration: 4000,
+    });
+  const removeToken = () => {
+    localStorage.removeItem("token");
+    setToken1(false);
+    notify();
+  };
   return (
     <div className="container flex justify-between items-center ">
-      <div className="text-[#7A7687] flex text-sm py-4 items-center gap-10 lg:gap-8 md:gap-4 sm:gap-2">
+      <div className="text-[#7A7687] flex text-sm py-4 md:py-2 items-center gap-10 lg:gap-6 md:gap-4 sm:gap-2">
         <div>
           <Link href="/">
             <Image src={Logo} alt="Logo" width={50} height={20} />
           </Link>
         </div>
-        <div className="flex items-center  border-[#D5D1E1] border  rounded-full">
-          <p className="px-4 py-2.5   rounded-full bg-[#EFEFEF]">
-            Все категории
-          </p>
-          <label className="flex items-center bg-[#D5D1E1] rounded-full">
-            <input
-              type="text"
-              placeholder="Поиск"
-              className="border-none rounded-full h-10 bg-[#f8f7f3] pl-2 outline-none"
-            />
-            <BiSearch className="w-10 rounded-full" />
-          </label>
+        <div className="base:hidden">
+          <SearchBar />
         </div>
-        <div>
+        <div className="lg:hidden">
           <p>
-            Пн-Пт с 09:00-19:00 <br /> Сб-Вс - выходной
+            Пн - Пт <br /> Сб - Вс
           </p>
         </div>
       </div>
       <div>
-        <ul className="flex text-sm items-end gap-8 md:gap-6 sm:gap-4">
-          <li className="flex flex-col items-center gap-1 text-[#7A7687]">
-            <GoPerson className=" scale-150" />
-            <p>Войти</p>
-          </li>
+        <ul className="flex text-sm items-end md:items-center gap-8 lg:gap-6 md:gap-4 sm:gap-2">
+          {!token1 ? (
+            <li
+              onClick={toggleModal}
+              className="flex cursor-pointer flex-col items-center gap-1 text-[#7A7687]"
+            >
+              <GoPerson className=" scale-150" />
+              <p className="md:hidden">Войти</p>
+            </li>
+          ) : (
+            <li
+              onClick={removeToken}
+              className="flex cursor-pointer   flex-col items-center gap-1 text-[#7A7687]"
+            >
+              <LogOut className=" scale-75" />
+              <p className="md:hidden">Вxoд</p>
+            </li>
+          )}
+
           <li className="flex flex-col items-center gap-1 text-[#7A7687]">
             <CiHeart className=" scale-150" />
-            <p>Избранное</p>
+            <p className="md:hidden">Избранное</p>
           </li>
           <li className="flex flex-col items-center gap-1 text-[#7A7687]">
             <div>
-              <BarChart />
-              {/* <Image width={17} src={CompareIcon} alt="compare icon" /> */}
+              <BarChart2 />
             </div>
-            <p>Сравнить</p>
+            <p className="md:hidden">Сравнить</p>
           </li>
-          <li className="flex flex-col items-center gap-1 text-[#7A7687]">
-            <SlBasket className=" scale-150" />
-            <p>Корзина</p>
+          <li>
+            <Link
+              href={"/cart"}
+              className="flex flex-col items-center gap-1 text-[#7A7687]"
+            >
+              <SlBasket className=" scale-150" />
+              <p className="md:hidden">Корзина</p>
+            </Link>
           </li>
         </ul>
       </div>
+      {showModal && (
+        <AuthenticationModal
+          setToken1={setToken1}
+          toggleModal={toggleModal}
+          showModal={showModal}
+        />
+      )}
     </div>
   );
 };
