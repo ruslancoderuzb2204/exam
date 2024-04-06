@@ -3,7 +3,6 @@ import Famous from "@/components/Home/Famous";
 import Block from "@/components/Home/Block";
 import WhyChoose from "@/components/Home/WhyChoose";
 import Products from "@/components/Home/Products";
-import Brands from "@/components/Home/Brands";
 import News from "@/components/Home/News";
 import Questions from "@/components/Home/Questions";
 import Subscribe from "@/components/Home/Subscribe";
@@ -13,6 +12,7 @@ import { AboutCompAccordion } from "@/components/Home/AboutCompAccordion";
 import React from "react";
 import Hero from "@/components/Home/Hero";
 import MarqueePg from "@/components/Home/Marquee";
+import Brands from "@/components/Home/Brands";
 
 const Home: React.FC = () => {
   return (
