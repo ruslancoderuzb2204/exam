@@ -6,7 +6,7 @@ import Visa from "./Visa.png";
 import Mir from "./Mir.png";
 import Famous1 from "./Photo2.svg";
 import Famous2 from "./Photo3.svg";
-import Famous3 from "./Photo77.svg";
+import Famous3 from "@/constants/photo77.svg"
 import Famous4 from "./Photo.svg";
 import Famous5 from "./Photo1.svg";
 import Famous6 from "./Photo4.svg";
